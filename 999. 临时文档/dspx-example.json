@@ -2,38 +2,39 @@
     "metadata": {
         "version": "1.0.0",
         "name": "这是一个示例工程",
-        "author": "作者",
-        "cacheDir": "./${FILEBASE}_cache"
+        "author": "作者"
     },
     "content": {
-        "beats": [
-            {
-                "pos": 0,
-                "numerator": 4,
-                "denominator": 4
-            }
-        ],
-        "tempos": [
-            {
-                "pos": 0,
-                "bpm": 120
-            }
-        ],
-        "labels": [
-            {
-                "pos": 1440,
-                "text": "开始"
-            }
-        ],
-        "main": {
+        "bus": {
             "control": {
-                "vol": 1.1
+                "gain": 0
             },
             "loop": {
                 "status": true,
-                "start": 480,
+                "start": 0,
                 "length": 4800
             }
+        },
+        "timeline": {
+            "beats": [
+                {
+                    "pos": 0,
+                    "numerator": 4,
+                    "denominator": 4
+                }
+            ],
+            "tempos": [
+                {
+                    "pos": 0,
+                    "bpm": 120
+                }
+            ],
+            "labels": [
+                {
+                    "pos": 1440,
+                    "text": "开始"
+                }
+            ]
         },
         "tracks": [
             {
@@ -43,18 +44,19 @@
                     "value": "#3B7FFF"
                 },
                 "control": {
-                    "vol": 1,
+                    "gain": 0,
                     "pan": 0,
                     "mute": false,
                     "solo": false
                 },
                 "clips": [
                     {
-                        "type": "midi",
+                        "type": "vocal",
                         "time": {
+                            "start": 0,
                             "duration": 300000,
-                            "left": 1000,
-                            "right": 1000
+                            "clipStart": 1000,
+                            "clipLen": 20000
                         },
                         "name": "样式 1",
                         "char": {
@@ -67,7 +69,10 @@
                                 "pos": 480,
                                 "length": 480,
                                 "lyric": "拉",
-                                "language": "zh_CN",
+                                "render": {
+                                    "seed": null,
+                                    "speedUp": 100
+                                },
                                 "phoneme": {
                                     "org": [
                                         {
@@ -90,12 +95,20 @@
                                 },
                                 "vibrato": {
                                     "start": 0.1,
-                                    "easeIn": 0.1,
-                                    "easeOut": 0.1,
                                     "freq": 1,
                                     "phase": 0.5,
                                     "amplitude": 1.1,
-                                    "offset": 0.1
+                                    "offset": 0.1,
+                                    "points": [
+                                        {
+                                            "x": 0.2,
+                                            "y": 1
+                                        },
+                                        {
+                                            "x": 0.8,
+                                            "y": 1
+                                        }
+                                    ]
                                 }
                             }
                         ],
@@ -135,6 +148,11 @@
                                     ]
                                 }
                             ]
+                        },
+                        "config": {
+                            "plugin1": {
+                                "key1": "val1"
+                            }
                         }
                     }
                 ]
@@ -146,7 +164,7 @@
                     "id": 1
                 },
                 "control": {
-                    "vol": 1,
+                    "gain": 1,
                     "pan": 0,
                     "mute": false,
                     "solo": false
@@ -155,8 +173,9 @@
                     {
                         "type": "audio",
                         "time": {
-                            "left": 1000,
-                            "right": 1000
+                            "start": 0,
+                            "clipStart": 1000,
+                            "clipLen": 20000
                         },
                         "name": "BGM_1",
                         "path": "/path/to/bgm.wav"
