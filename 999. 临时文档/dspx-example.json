@@ -158,7 +158,25 @@
                             ]
                         },
                         "attrs?": {
-                            "timbre": {}
+                            "timbre": {
+                                "nodes": [
+                                    {
+                                        "x": 114,
+                                        "y": [0.1,0.2,0.8],
+                                        "interp": "linear"
+                                    },
+                                    {
+                                        "x": 1919,
+                                        "y": [0.1,0.2,0.8],
+                                        "interp": "hermite"
+                                    },
+                                    {
+                                        "x": 0,
+                                        "y": [0.1,0.2,0.8],
+                                        "interp": null
+                                    }
+                                ]
+                            }
                         },
                         "config?": {
                             "plugin1": {
