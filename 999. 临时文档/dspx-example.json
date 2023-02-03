@@ -1,5 +1,5 @@
 {
-    "metadata": {
+    "metadata?": {
         "version": "1.0.0",
         "name": "这是一个示例工程",
         "author": "作者"
@@ -10,7 +10,7 @@
                 "gain": 0
             },
             "loop": {
-                "status": true,
+                "enabled": true,
                 "start": 0,
                 "length": 4800
             }
@@ -51,7 +51,7 @@
                 },
                 "clips": [
                     {
-                        "type": "vocal",
+                        "type": "singing",
                         "time": {
                             "start": 0,
                             "duration": 300000,
@@ -59,26 +59,28 @@
                             "clipLen": 20000
                         },
                         "name": "样式 1",
-                        "char": {
-                            "id": 3,
-                            "name": "夏叶子"
+                        "models?": {
+                            "acoustic": {
+                                "id": 3,
+                                "name": "夏叶子"
+                            },
+                            "variance": {
+                                "id": 1
+                            }
                         },
                         "notes": [
                             {
-                                "noteNum": 60,
                                 "pos": 480,
                                 "length": 480,
+                                "noteNum": 60,
                                 "lyric": "拉",
-                                "render": {
-                                    "seed": null,
-                                    "speedUp": 100
-                                },
                                 "phoneme": {
                                     "org": [
                                         {
                                             "type": "head",
                                             "token": "zh",
-                                            "time": 5
+                                            "time": 5,
+                                            "attrs?": {}
                                         },
                                         {
                                             "type": "normal",
@@ -109,6 +111,12 @@
                                             "y": 1
                                         }
                                     ]
+                                },
+                                "attrs?": {
+                                    "render": {
+                                        "seed": null,
+                                        "speedUp": 100
+                                    }
                                 }
                             }
                         ],
@@ -149,7 +157,10 @@
                                 }
                             ]
                         },
-                        "config": {
+                        "attrs?": {
+                            "timbre": {}
+                        },
+                        "config?": {
                             "plugin1": {
                                 "key1": "val1"
                             }
@@ -184,7 +195,8 @@
             }
         ]
     },
-    "config": {
+    "attrs?": {},
+    "config?": {
         "app": {
             "resolution": 480
         },
