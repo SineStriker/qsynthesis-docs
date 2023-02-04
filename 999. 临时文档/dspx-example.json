@@ -7,7 +7,8 @@
     "content": {
         "master": {
             "control": {
-                "gain": 0
+                "gain": 0,
+                "mute": false
             },
             "loop": {
                 "enabled": true,
@@ -39,12 +40,8 @@
         "tracks": [
             {
                 "name": "主音轨",
-                "color": {
-                    "type": "custom",
-                    "value": "#3B7FFF"
-                },
                 "control": {
-                    "gain": 0,
+                    "gain": 1,
                     "pan": 0,
                     "mute": false,
                     "solo": false
@@ -60,6 +57,7 @@
                         },
                         "name": "样式 1",
                         "control": {
+                            "gain": 1,
                             "mute": false
                         },
                         "source": {
@@ -109,7 +107,7 @@
                                     "end": 0.8,
                                     "freq": 1,
                                     "phase": 0.5,
-                                    "amplitude": 1.1,
+                                    "amp": 1.1,
                                     "offset": 0.1,
                                     "points": [
                                         {
@@ -222,14 +220,17 @@
                     }
                 ],
                 "extra": {},
-                "workspace": {}
+                "workspace": {
+                    "app": {
+                        "color": {
+                            "type": "custom",
+                            "value": "#3B7FFF"
+                        }
+                    }
+                }
             },
             {
                 "name": "音乐轨",
-                "color": {
-                    "type": "default",
-                    "id": 1
-                },
                 "control": {
                     "gain": 1,
                     "pan": 0,
@@ -241,11 +242,13 @@
                         "type": "audio",
                         "time": {
                             "start": 0,
+                            "length": 0,
                             "clipStart": 1000,
                             "clipLen": 20000
                         },
                         "name": "BGM_1",
                         "control": {
+                            "gain": 1,
                             "mute": false
                         },
                         "path": "/path/to/bgm.wav",
@@ -254,12 +257,19 @@
                     }
                 ],
                 "extra": {},
-                "workspace": {}
+                "workspace": {
+                    "app": {
+                        "color": {
+                            "type": "default",
+                            "id": 1
+                        }
+                    }
+                }
             }
         ],
         "extra": {},
         "workspace": {
-            "master": {
+            "app": {
                 "resolution": 480
             },
             "plugin1": {
