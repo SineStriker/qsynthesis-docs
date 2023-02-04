@@ -121,73 +121,58 @@
                             }
                         ],
                         "params": {
-                            "pitchDelta": {
-                                "org": null,
-                                "new": [
-                                    {
-                                        "type": "anchor",
-                                        "nodes": [
-                                            {
-                                                "x": 114,
-                                                "y": 514,
-                                                "interp": "linear"
-                                            },
-                                            {
-                                                "x": 1919,
-                                                "y": 810,
-                                                "interp": "hermite"
-                                            },
-                                            {
-                                                "x": 0,
-                                                "y": 0,
-                                                "interp": null
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "type": "free",
-                                        "nodes": [
-                                            {
-                                                "x": 0,
-                                                "y": 0
-                                            },
-                                            {
-                                                "x": 1,
-                                                "y": 1
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
+                            "pitchDelta": [
+                                {
+                                    "type": "anchor",
+                                    "nodes": [
+                                        {
+                                            "x": 114,
+                                            "y": 514,
+                                            "interp": "linear"
+                                        },
+                                        {
+                                            "x": 1919,
+                                            "y": 810,
+                                            "interp": "hermite"
+                                        },
+                                        {
+                                            "x": 0,
+                                            "y": 0,
+                                            "interp": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "free",
+                                    "nodes": [
+                                        {
+                                            "x": 0,
+                                            "y": 0
+                                        },
+                                        {
+                                            "x": 1,
+                                            "y": 1
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         "attrs?": {
                             "timbre": {
                                 "nodes": [
                                     {
                                         "x": 114,
-                                        "y": [
-                                            0.1,
-                                            0.2,
-                                            0.8
-                                        ],
+                                        "y": [0.1,0.2,0.8],
                                         "interp": "linear"
                                     },
                                     {
                                         "x": 1919,
-                                        "y": [
-                                            0.1,
-                                            0.2,
-                                            0.8
-                                        ],
+                                        "y": [0.1,0.2,0.8],
                                         "interp": "hermite"
                                     },
                                     {
                                         "x": 0,
-                                        "y": [
-                                            0.1,
-                                            0.2,
-                                            0.8
-                                        ],
+                                        "y": [0.1,0.2,0.8],
                                         "interp": null
                                     }
                                 ]
