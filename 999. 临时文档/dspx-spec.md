@@ -46,12 +46,12 @@
 ```
 + `master`：总线控制
     + `control`: 全局主控
-        + `gain`：增益
+        + `gain`：增益，`double`
         + `mute`：静音
     + `loop`: 循环区间
         + `enabled`: 是否启用
-        + `start`：开始（tick)
-        + `length`：长度（tick)
+        + `start`：开始（tick)，`int`
+        + `length`：长度（tick)，`int`
 + `timeline`：时间轴
     + `timeSignatures`：拍号列表
     + `tempos`：曲速列表
@@ -69,9 +69,9 @@
     "denominator": 4
 }
 ```
-+ `pos`：位置（tick）
-+ `numerator`：分子
-+ `denominator`：分母
++ `pos`：位置（tick），`int`
++ `numerator`：分子，`int`
++ `denominator`：分母，`int`
 
 ## 曲速
 
@@ -81,8 +81,8 @@
     "value": 120.0
 }
 ```
-+ `pos`：位置（tick）
-+ `value`：曲速值
++ `pos`：位置（tick），`int`
++ `value`：曲速值，`double`
 
 ## 标签
 
@@ -92,7 +92,7 @@
     "text": "张三"
 }
 ```
-+ `pos`：位置（tick）
++ `pos`：位置（tick），`int`
 + `text`：标签内容
 
 ## 音轨
@@ -114,8 +114,8 @@
 
 + `name`：主控
 + `control`: 音轨主控
-    + `gain`：增益
-    + `pan`：声像
+    + `gain`：增益，`double`
+    + `pan`：声像（-1~1），`double`
     + `mute`：静音
     + `solo`：独奏
 + `clips`：音轨区间列表，暂有波形区间、人声区间
@@ -146,10 +146,10 @@
 
 + `type`：类型，固定值
 + `time`: 时间信息
-    + `start`：区间开始（tick）
-    + `length`：固定为0
-    + `clipStart`：实际开始，相对于区间开始的长度（tick）
-    + `clipLen`：实际长度，相对于实际开始的长度（tick）
+    + `start`：区间开始（tick），`int`
+    + `length`：固定为0，`int`
+    + `clipStart`：实际开始，相对于区间开始的长度（tick），`int`
+    + `clipLen`：实际长度，相对于实际开始的长度（tick），`int`
 + `name`：音轨名
 + `control`：与主控一致
 + `path`：波形文件所在路径
@@ -219,7 +219,7 @@
         "points": [
             {
                 "x": 0.2,
-                "y": 1
+                "y": 0.8
             },
             {
                 "x": 0.8,
@@ -232,23 +232,23 @@
 }
 ```
 
-+ `pos`：位置（tick）
-+ `length`：长度（tick）
++ `pos`：位置（tick），`int`
++ `length`：长度（tick），`int`
 + `keyNum`：音阶
 + `lyric`：歌词
 + `phonemes`：音素
     `original`：自动参数列表
     `edited`：已修改的参数列表
 + `vibrato`：颤音
-    + `start`：开始（音符比例）
-    + `end`：结束（音符比例）
-    + `freq`：频率（Hz）
-    + `phase`：相位（0~1）
-    + `amp`：振幅（半音倍率）
-    + `offset`：音高偏移（半音倍率）
+    + `start`：开始（音符比例），`double`
+    + `end`：结束（音符比例），`double`
+    + `freq`：频率（Hz），`int`
+    + `phase`：相位（0~1），`double`
+    + `amp`：振幅（半音倍率），`double`
+    + `offset`：音高偏移（半音倍率），`double`
     + `points`：控制点列表，一般只有两个点
-        + `x`：颤音长度比例
-        + `y`：颤音振幅比例
+        + `x`：颤音长度比例，`double`
+        + `y`：颤音振幅比例，`double`
 + `extra`：其他参数，不定长
 + `workspace`：状态信息，不定长
 
@@ -266,7 +266,7 @@
 
 + `type`：类型，`ahead`、`normal`或`final`
 + `token`：音素符号
-+ `duration`：时长（ms）
++ `duration`：时长（ms），`int`
 + `extra`：其他参数，不定长
 + `workspace`：状态信息，不定长
 
@@ -287,8 +287,8 @@
 ```
 + `type`：类型，固定值
 + `nodes`：参数列表
-    + `x`：时间坐标（Tick）
-    + `y`：音高坐标（1/100个半音）
+    + `x`：时间坐标（Tick），`int`
+    + `y`：音高坐标（1/100个半音），`int`
 
 ### 锚点型
 
@@ -317,6 +317,6 @@
 
 + `type`：类型，固定值
 + `nodes`：参数列表
-    + `x`：时间坐标（Tick）
-    + `y`：音高坐标（1/100个半音）
+    + `x`：时间坐标（Tick），`int`
+    + `y`：音高坐标（1/100个半音），`int`
     + `interp`：插值方式

@@ -105,7 +105,7 @@
                                 "vibrato": {
                                     "start": 0.1,
                                     "end": 0.8,
-                                    "freq": 1,
+                                    "freq": 5,
                                     "phase": 0.5,
                                     "amp": 1.1,
                                     "offset": 0.1,
