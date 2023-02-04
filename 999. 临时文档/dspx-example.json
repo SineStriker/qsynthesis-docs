@@ -60,7 +60,7 @@
                             "gain": 1,
                             "mute": false
                         },
-                        "source": {
+                        "sources": {
                             "acoustic": {
                                 "uri": "localhost:2333",
                                 "id": 3,

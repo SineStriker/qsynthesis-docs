@@ -11,8 +11,12 @@
         "name": "New Project",
         "author": "Admin"
     },
-    "content": "object",
-    "workspace": "object"
+    "content": {
+        ...
+    },
+    "workspace": {
+        ...
+    }
 }
 ```
 + `metadata`：文件的元信息，包括版本号、工程名、作者等
@@ -35,13 +39,25 @@
         }
     },
     "timeline": {
-        "timeSignatures": "array",
-        "tempos": "array",
-        "labels": "array"
+        "timeSignatures": [
+            ...
+        ],
+        "tempos": [
+            ...
+        ],
+        "labels": [
+            ...
+        ]
     },
-    "tracks": "array",
-    "extra": "object",
-    "workspace": "object"
+    "tracks": [
+        ...
+    ],
+    "extra": {
+        ...
+    },
+    "workspace": {
+        ...
+    }
 }
 ```
 + `master`：总线控制
@@ -106,9 +122,15 @@
         "mute": false,
         "solo": false
     },
-    "clips": "array",
-    "extra": "object",
-    "workspace": "object"
+    "clips": [
+        ...
+    ],
+    "extra": {
+        ...
+    },
+    "workspace": {
+        ...
+    }
 }
 ```
 
@@ -139,8 +161,12 @@
         "mute": false
     },
     "path": "/path/to/bgm.wav",
-    "extra": "object",
-    "workspace": "object"
+    "extra": {
+        ...
+    },
+    "workspace": {
+        ...
+    }
 }
 ```
 
@@ -172,16 +198,28 @@
         "gain": 1,
         "mute": false
     },
-    "notes": "array",
+    "notes": [
+        ...
+    ],
     "params": {
         "pitch": {
-            "original": "array",
-            "edited": "array"
+            "original": [
+                ...
+            ],
+            "edited": [
+                ...
+            ]
         }
     },
-    "source": "object",
-    "extra": "object",
-    "workspace": "object",
+    "sources": {
+        ...
+    },
+    "extra": {
+        ...
+    },
+    "workspace": {
+        ...
+    }
 }
 ```
 
@@ -193,7 +231,7 @@
     + `pitchDelta`：音高偏差
         + `original`：自动参数列表
         + `edited`：已修改的参数列表
-+ `source`：使用到的模型，不定长
++ `sources`：使用到的模型，不定长
 + `extra`：其他参数，不定长
 + `workspace`：状态信息，不定长
 
@@ -206,8 +244,12 @@
     "keyNum": 60,
     "lyric": "拉",
     "phonemes": {
-        "original": "array",
-        "edited": "array"
+        "original": [
+            ...
+        ],
+        "edited": [
+            ...
+        ]
     },
     "vibrato": {
         "start": 0.1,
@@ -227,8 +269,12 @@
             }
         ]
     },
-    "extra": "object",
-    "workspace": "object"
+    "extra": {
+        ...
+    },
+    "workspace": {
+        ...
+    }
 }
 ```
 
@@ -259,8 +305,12 @@
     "type": "ahead",
     "token": "ang",
     "duration": 5,
-    "extra": "object",
-    "workspace": "object"
+    "extra": {
+        ...
+    },
+    "workspace": {
+        ...
+    }
 }
 ```
 
