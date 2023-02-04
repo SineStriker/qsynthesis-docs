@@ -16,7 +16,7 @@
             }
         },
         "timeline": {
-            "beats": [
+            "timeSignatures": [
                 {
                     "pos": 0,
                     "numerator": 4,
@@ -26,7 +26,7 @@
             "tempos": [
                 {
                     "pos": 0,
-                    "bpm": 120
+                    "value": 120
                 }
             ],
             "labels": [
@@ -59,6 +59,9 @@
                             "clipLen": 20000
                         },
                         "name": "样式 1",
+                        "control": {
+                            "mute": false
+                        },
                         "source": {
                             "acoustic": {
                                 "uri": "localhost:2333",
@@ -81,17 +84,22 @@
                                             "type": "ahead",
                                             "token": "zh",
                                             "duration": 5,
-                                            "extra": {}
+                                            "extra": {},
+                                            "workspace": {}
                                         },
                                         {
                                             "type": "normal",
                                             "token": "u",
-                                            "duration": 5
+                                            "duration": 5,
+                                            "extra": {},
+                                            "workspace": {}
                                         },
                                         {
                                             "type": "final",
                                             "token": "ang",
-                                            "duration": 5
+                                            "duration": 5,
+                                            "extra": {},
+                                            "workspace": {}
                                         }
                                     ],
                                     "edited": null
@@ -119,7 +127,8 @@
                                         "seed": null,
                                         "speedUp": 100
                                     }
-                                }
+                                },
+                                "workspace": {}
                             }
                         ],
                         "params": {
@@ -236,6 +245,9 @@
                             "clipLen": 20000
                         },
                         "name": "BGM_1",
+                        "control": {
+                            "mute": false
+                        },
                         "path": "/path/to/bgm.wav",
                         "extra": {},
                         "workspace": {}
@@ -244,15 +256,16 @@
                 "extra": {},
                 "workspace": {}
             }
-        ]
-    },
-    "extra": {},
-    "workspace": {
-        "app": {
-            "resolution": 480
-        },
-        "plugin1": {
-            "key1": "val1"
+        ],
+        "extra": {},
+        "workspace": {
+            "master": {
+                "resolution": 480
+            },
+            "plugin1": {
+                "key1": "val1"
+            }
         }
-    }
+    },
+    "workspace": {}
 }
