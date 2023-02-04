@@ -1,11 +1,11 @@
 {
-    "metadata?": {
+    "metadata": {
         "version": "1.0.0",
         "name": "这是一个示例工程",
         "author": "作者"
     },
     "content": {
-        "bus": {
+        "master": {
             "control": {
                 "gain": 0
             },
@@ -54,13 +54,14 @@
                         "type": "singing",
                         "time": {
                             "start": 0,
-                            "duration": 300000,
+                            "length": 300000,
                             "clipStart": 1000,
                             "clipLen": 20000
                         },
                         "name": "样式 1",
-                        "models?": {
+                        "source": {
                             "acoustic": {
+                                "uri": "localhost:2333",
                                 "id": 3,
                                 "name": "夏叶子"
                             },
@@ -72,31 +73,32 @@
                             {
                                 "pos": 480,
                                 "length": 480,
-                                "noteNum": 60,
+                                "key": 60,
                                 "lyric": "拉",
-                                "phoneme": {
-                                    "org": [
+                                "phonemes": {
+                                    "original": [
                                         {
-                                            "type": "head",
+                                            "type": "ahead",
                                             "token": "zh",
-                                            "time": 5,
-                                            "attrs?": {}
+                                            "duration": 5,
+                                            "extra": {}
                                         },
                                         {
                                             "type": "normal",
                                             "token": "u",
-                                            "time": 5
+                                            "duration": 5
                                         },
                                         {
-                                            "type": "tail",
+                                            "type": "final",
                                             "token": "ang",
-                                            "time": 5
+                                            "duration": 5
                                         }
                                     ],
-                                    "new": null
+                                    "edited": null
                                 },
                                 "vibrato": {
                                     "start": 0.1,
+                                    "end": 0.8,
                                     "freq": 1,
                                     "phase": 0.5,
                                     "amplitude": 1.1,
@@ -112,7 +114,7 @@
                                         }
                                     ]
                                 },
-                                "attrs?": {
+                                "extra": {
                                     "render": {
                                         "seed": null,
                                         "speedUp": 100
@@ -121,64 +123,89 @@
                             }
                         ],
                         "params": {
-                            "pitchDelta": [
-                                {
-                                    "type": "anchor",
-                                    "nodes": [
-                                        {
-                                            "x": 114,
-                                            "y": 514,
-                                            "interp": "linear"
-                                        },
-                                        {
-                                            "x": 1919,
-                                            "y": 810,
-                                            "interp": "hermite"
-                                        },
-                                        {
-                                            "x": 0,
-                                            "y": 0,
-                                            "interp": null
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "free",
-                                    "nodes": [
-                                        {
-                                            "x": 0,
-                                            "y": 0
-                                        },
-                                        {
-                                            "x": 1,
-                                            "y": 1
-                                        }
-                                    ]
-                                }
-                            ]
+                            "pitchDelta": {
+                                "original": [
+                                    {
+                                        "type": "free",
+                                        "nodes": [
+                                            {
+                                                "x": 114,
+                                                "y": 514
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "edited": [
+                                    {
+                                        "type": "anchor",
+                                        "nodes": [
+                                            {
+                                                "x": 114,
+                                                "y": 514,
+                                                "interp": "linear"
+                                            },
+                                            {
+                                                "x": 1919,
+                                                "y": 810,
+                                                "interp": "hermite"
+                                            },
+                                            {
+                                                "x": 0,
+                                                "y": 0,
+                                                "interp": null
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "free",
+                                        "nodes": [
+                                            {
+                                                "x": 0,
+                                                "y": 0
+                                            },
+                                            {
+                                                "x": 1,
+                                                "y": 1
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         },
-                        "attrs?": {
+                        "extra": {
                             "timbre": {
                                 "nodes": [
                                     {
                                         "x": 114,
-                                        "y": [0.1,0.2,0.8],
+                                        "y": [
+                                            0.1,
+                                            0.2,
+                                            0.8
+                                        ],
                                         "interp": "linear"
                                     },
                                     {
                                         "x": 1919,
-                                        "y": [0.1,0.2,0.8],
+                                        "y": [
+                                            0.1,
+                                            0.2,
+                                            0.8
+                                        ],
                                         "interp": "hermite"
                                     },
                                     {
                                         "x": 0,
-                                        "y": [0.1,0.2,0.8],
+                                        "y": [
+                                            0.1,
+                                            0.2,
+                                            0.8
+                                        ],
                                         "interp": null
                                     }
                                 ]
                             }
                         },
-                        "config?": {
+                        "workspace": {
                             "plugin1": {
                                 "key1": "val1"
                             }
@@ -213,8 +240,8 @@
             }
         ]
     },
-    "attrs?": {},
-    "config?": {
+    "extra": {},
+    "workspace": {
         "app": {
             "resolution": 480
         },
