@@ -73,7 +73,7 @@
                             {
                                 "pos": 480,
                                 "length": 480,
-                                "key": 60,
+                                "keyNum": 60,
                                 "lyric": "拉",
                                 "phonemes": {
                                     "original": [
@@ -211,7 +211,9 @@
                             }
                         }
                     }
-                ]
+                ],
+                "extra": {},
+                "workspace": {}
             },
             {
                 "name": "音乐轨",
@@ -234,9 +236,13 @@
                             "clipLen": 20000
                         },
                         "name": "BGM_1",
-                        "path": "/path/to/bgm.wav"
+                        "path": "/path/to/bgm.wav",
+                        "extra": {},
+                        "workspace": {}
                     }
-                ]
+                ],
+                "extra": {},
+                "workspace": {}
             }
         ]
     },
