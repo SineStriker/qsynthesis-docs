@@ -174,7 +174,7 @@
     },
     "notes": "array",
     "params": {
-        "pitchDelta": {
+        "pitch": {
             "original": "array",
             "edited": "array"
         }
@@ -242,13 +242,13 @@
 + `vibrato`：颤音
     + `start`：开始（音符比例），`double`
     + `end`：结束（音符比例），`double`
-    + `freq`：频率（Hz），`int`
+    + `freq`：频率（Hz），`double`
     + `phase`：相位（0~1），`double`
     + `amp`：振幅（半音倍率），`double`
     + `offset`：音高偏移（半音倍率），`double`
     + `points`：控制点列表，一般只有两个点
-        + `x`：颤音长度比例，`double`
-        + `y`：颤音振幅比例，`double`
+        + `x`：颤音长度比例（0~1），`double`
+        + `y`：颤音振幅比例（0~1），`double`
 + `extra`：其他参数，不定长
 + `workspace`：状态信息，不定长
 
@@ -320,3 +320,7 @@
     + `x`：时间坐标（Tick），`int`
     + `y`：音高坐标（1/100个半音），`int`
     + `interp`：插值方式
+
+## 其他
+
++ `pitch`：音高曲线参数，`y`的值为绝对音高，如`C4`为`6000`

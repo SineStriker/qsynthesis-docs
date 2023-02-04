@@ -130,7 +130,7 @@
                             }
                         ],
                         "params": {
-                            "pitchDelta": {
+                            "pitch": {
                                 "original": [
                                     {
                                         "type": "free",
