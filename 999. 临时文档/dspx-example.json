@@ -174,7 +174,7 @@
                                     }
                                 ]
                             },
-                            "power": {
+                            "energy": {
                                 "original": [],
                                 "edited": [],
                                 "envelope": []
