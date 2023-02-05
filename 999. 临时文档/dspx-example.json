@@ -173,6 +173,11 @@
                                         ]
                                     }
                                 ]
+                            },
+                            "power": {
+                                "original": [],
+                                "edited": [],
+                                "envelope": []
                             }
                         },
                         "extra": {
