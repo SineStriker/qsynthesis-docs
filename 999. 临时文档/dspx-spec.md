@@ -31,11 +31,6 @@
         "control": {
             "gain": 0,
             "mute": false
-        },
-        "loop": {
-            "enabled": false,
-            "start": 0,
-            "length": 4800
         }
     },
     "timeline": {
@@ -64,10 +59,10 @@
     + `control`: 全局主控
         + `gain`：增益，`double`
         + `mute`：静音
-    + `loop`: 循环区间
+    <!-- + `loop`: 循环区间
         + `enabled`: 是否启用
         + `start`：开始（tick)，`int`
-        + `length`：长度（tick)，`int`
+        + `length`：长度（tick)，`int` -->
 + `timeline`：时间轴
     + `timeSignatures`：拍号列表
     + `tempos`：曲速列表

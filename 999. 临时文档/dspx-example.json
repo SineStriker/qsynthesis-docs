@@ -9,11 +9,6 @@
             "control": {
                 "gain": 0,
                 "mute": false
-            },
-            "loop": {
-                "enabled": true,
-                "start": 0,
-                "length": 4800
             }
         },
         "timeline": {
@@ -271,7 +266,12 @@
         "extra": {},
         "workspace": {
             "app": {
-                "resolution": 480
+                "resolution": 480,
+                "loop": {
+                    "enabled": true,
+                    "start": 0,
+                    "length": 4800
+                }
             },
             "plugin1": {
                 "key1": "val1"
