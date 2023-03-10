@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+    <config>
+        <namespace>app</namespace>
+    </config>
+    <content>
+        <menu id="mainMenu">
+            <!-- 文件 -->
+            <menu id="file">
+                <!-- 新建/打开/导入 -->
+                <action id="file.new" />
+                <action id="file.open" />
+                <action id="file.import" />
+                <separator />
+
+                <!-- 保存/另存为 -->
+                <action id="file.save" />
+                <action id="file.saveAs" />
+                <action id="file.restore" />
+                <separator />
+
+                <!-- 导出 -->
+                <action id="file.export" />
+                <separator />
+
+                <!-- 关闭/退出 -->
+                <action id="file.close" />
+                <action id="file.exit" />
+            </menu>
+
+            <!-- 编辑 -->
+            <menu id="edit">
+                <!-- 撤销/重做 -->
+                <action id="edit.undo" />
+                <action id="edit.redo" />
+                <separator />
+
+                <!-- 复制/剪切/粘贴/删除 -->
+                <action id="edit.copy" />
+                <action id="edit.cut" />
+                <action id="edit.paste" />
+                <action id="edit.del" />
+                <separator />
+
+                <!-- 全选/取消选择 -->
+                <action id="edit.selectAll" />
+                <action id="edit.deselect" />
+            </menu>
+
+            <!-- 视图 -->
+            <menu id="view">
+                <!-- 显隐 -->
+                <menu id="view.appearance">
+                    <action id="view.mainMenu" checkable="true" />    <!-- 菜单栏 -->
+                    <action id="view.toolBar" checkable="true" />     <!-- 工具栏 -->
+                    <action id="view.statusBar" checkable="true" />   <!-- 状态栏-->
+                    <action id="view.dockBar" checkable="true" />     <!-- 任务栏 -->
+                </menu>
+                <menu id="view.toolWindows">
+                    <!-- 待加 -->
+                </menu>
+                <separator />
+            </menu>
+
+            <!-- 帮助 -->
+            <menu id="help">
+                <!-- 欢迎 -->
+                <action id="help.showActions" />
+                <action id="help.docs" />
+                <separator />
+
+                <!-- 报告 -->
+                <action id="help.reportIssues" />
+                <action id="help.reportFeatures" />
+                <separator />
+
+                <!-- 关于 -->
+                <action id="help.aboutApp" />
+                <action id="help.aboutQt" />
+            </menu>
+        </menu>
+    </content>
+</document>
