@@ -24,6 +24,4 @@
 
 ## VST 与编辑器本体通信的策略
 
-首先，当 VST 被宿主加载时，VST 会初始化 CorePlugin，并通知 CorePlugin 以 External 模式运行。在这种情况下，插件可以判断程序是 Standalone 模式还是 External 模式，并决定自身的行为。
-
-还要实现一个用于让 VST 控制编辑器的模块（以下称之为 ControlInterface），当 CorePlugin 被VST初始化时，会创建一个 ControlInterface 的实例返回给 VST，VST 可以通过 ControlInterface 来 toggle 编辑器窗口，让编辑器本体访问 VST 中存储的工程文件，控制回放，获取编辑器合成的音频波形等功能。如果可能的话，也可以复用 ControlInterface，在程序以 Standalone 模式运行时，也通过 ControlInterface 来控制上述功能。
+首先，当 VST 被宿主加载时，VST 读取一个全局配置文件，从这个配置文件中找到编辑器的 apploder 动态库位置，设置环境变量 `USE_VST`，并动态加载这个动态库。这个动态库会通知 CorePlugin 以 External 模式运行。插件可以判断程序是 Standalone 模式还是 External 模式，并决定自身的行为。CorePlugin 会加载插件 VstBridge，并由 VstBridge 提供一个用于让 VST 控制编辑器的模块（以下称之为 ControlInterface）。apploader 需要为 VST 插件提供可以访问的接口，来让 VST 插件获取编辑器状态信息以及 ControlInterface 实例的地址等数据。VST 可以通过 ControlInterface 来 toggle 编辑器窗口，让编辑器本体访问 VST 中存储的工程文件，控制回放，获取编辑器合成的音频波形等功能。
