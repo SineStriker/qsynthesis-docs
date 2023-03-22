@@ -66,7 +66,7 @@ struct PlaybackParameters {
 
 作用：当用户关闭 VST 界面时触发。用于隐藏编辑器窗口。
 
-### ` Result PlaybackProcessor(const PlaybackParameters *playbackParameters, bool isPlaying, int32_t numOutputs, float *const *outputs)`
+### `Result PlaybackProcessor(const PlaybackParameters *playbackParameters, bool isPlaying, int32_t numOutputs, float *const *outputs)`
 
 调用机制：同步。
 
