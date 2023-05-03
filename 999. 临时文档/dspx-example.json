@@ -1,282 +1,282 @@
 {
-  "metadata": {
-    "version": "1.0.0",
-    "name": "这是一个示例工程",
-    "author": "作者"
-  },
-  "content": {
-    "master": {
-      "control": {
-        "gain": 0,
-        "mute": false
-      }
+    "metadata": {
+        "version": "1.0.0",
+        "name": "这是一个示例工程",
+        "author": "作者"
     },
-    "timeline": {
-      "timeSignatures": [
-        {
-          "pos": 0,
-          "numerator": 4,
-          "denominator": 4
-        }
-      ],
-      "tempos": [
-        {
-          "pos": 0,
-          "value": 120
-        }
-      ],
-      "labels": [
-        {
-          "pos": 1440,
-          "text": "开始"
-        }
-      ]
-    },
-    "tracks": [
-      {
-        "name": "主音轨",
-        "control": {
-          "gain": 1,
-          "pan": 0,
-          "mute": false,
-          "solo": false
-        },
-        "clips": [
-          {
-            "type": "singing",
-            "time": {
-              "start": 0,
-              "length": 300000,
-              "clipStart": 1000,
-              "clipLen": 20000
-            },
-            "name": "样式 1",
+    "content": {
+        "master": {
             "control": {
-              "gain": 1,
-              "mute": false
-            },
-            "sources": {
-              "acoustic": {
-                "uri": "localhost:2333",
-                "id": 3,
-                "name": "夏叶子"
-              },
-              "variance": {
-                "id": 1
-              }
-            },
-            "notes": [
-              {
-                "pos": 480,
-                "length": 480,
-                "keyNum": 60,
-                "lyric": "拉",
-                "phonemes": {
-                  "original": [
-                    {
-                      "type": "ahead",
-                      "token": "zh",
-                      "duration": 5,
-                      "extra": {},
-                      "workspace": {}
-                    },
-                    {
-                      "type": "normal",
-                      "token": "u",
-                      "duration": 5,
-                      "extra": {},
-                      "workspace": {}
-                    },
-                    {
-                      "type": "final",
-                      "token": "ang",
-                      "duration": 5,
-                      "extra": {},
-                      "workspace": {}
-                    }
-                  ],
-                  "edited": []
-                },
-                "vibrato": {
-                  "start": 0.1,
-                  "end": 0.8,
-                  "freq": 5,
-                  "phase": 0.5,
-                  "amp": 1.1,
-                  "offset": 0.1,
-                  "points": [
-                    {
-                      "x": 0.2,
-                      "y": 1
-                    },
-                    {
-                      "x": 0.8,
-                      "y": 1
-                    }
-                  ]
-                },
-                "extra": {
-                  "render": {
-                    "seed": 0,
-                    "speedUp": 100
-                  }
-                },
-                "workspace": {}
-              }
+                "gain": 0,
+                "mute": false
+            }
+        },
+        "timeline": {
+            "timeSignatures": [
+                {
+                    "pos": 0,
+                    "numerator": 4,
+                    "denominator": 4
+                }
             ],
-            "params": {
-              "pitch": {
-                "original": [
-                  {
-                    "type": "free",
-                    "start": 100,
-                    "step": 5,
-                    "values": [
-                      114,
-                      514
-                    ]
-                  }
-                ],
-                "edited": [
-                  {
-                    "type": "anchor",
-                    "nodes": [
-                      {
-                        "x": 114,
-                        "y": 514,
-                        "interp": "linear"
-                      },
-                      {
-                        "x": 1919,
-                        "y": 810,
-                        "interp": "hermite"
-                      },
-                      {
-                        "x": 3330,
-                        "y": 0,
-                        "interp": "none"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "free",
-                    "start": 3500,
-                    "step": 5,
-                    "values": [
-                      0,
-                      1
-                    ]
-                  }
-                ]
-              },
-              "energy": {
-                "original": [],
-                "edited": [],
-                "envelope": []
-              }
-            },
-            "extra": {
-              "timbre": {
-                "nodes": [
-                  {
-                    "x": 114,
-                    "y": [
-                      0.1,
-                      0.2,
-                      0.8
-                    ],
-                    "interp": "linear"
-                  },
-                  {
-                    "x": 1919,
-                    "y": [
-                      0.1,
-                      0.2,
-                      0.8
-                    ],
-                    "interp": "hermite"
-                  },
-                  {
-                    "x": 0,
-                    "y": [
-                      0.1,
-                      0.2,
-                      0.8
-                    ],
-                    "interp": "none"
-                  }
-                ]
-              }
-            },
-            "workspace": {
-              "plugin1": {
-                "key1": "val1"
-              }
-            }
-          }
-        ],
-        "extra": {},
-        "workspace": {
-          "app": {
-            "color": {
-              "type": "custom",
-              "value": "#3B7FFF"
-            }
-          }
-        }
-      },
-      {
-        "name": "音乐轨",
-        "control": {
-          "gain": 1,
-          "pan": 0,
-          "mute": false,
-          "solo": false
+            "tempos": [
+                {
+                    "pos": 0,
+                    "value": 120
+                }
+            ],
+            "labels": [
+                {
+                    "pos": 1440,
+                    "text": "开始"
+                }
+            ]
         },
-        "clips": [
-          {
-            "type": "audio",
-            "time": {
-              "start": 0,
-              "length": 0,
-              "clipStart": 1000,
-              "clipLen": 20000
+        "tracks": [
+            {
+                "name": "主音轨",
+                "control": {
+                    "gain": 1,
+                    "pan": 0,
+                    "mute": false,
+                    "solo": false
+                },
+                "clips": [
+                    {
+                        "type": "singing",
+                        "time": {
+                            "start": 0,
+                            "length": 300000,
+                            "clipStart": 1000,
+                            "clipLen": 20000
+                        },
+                        "name": "样式 1",
+                        "control": {
+                            "gain": 1,
+                            "mute": false
+                        },
+                        "sources": {
+                            "acoustic": {
+                                "uri": "localhost:2333",
+                                "id": 3,
+                                "name": "夏叶子"
+                            },
+                            "variance": {
+                                "id": 1
+                            }
+                        },
+                        "notes": [
+                            {
+                                "pos": 480,
+                                "length": 480,
+                                "keyNum": 60,
+                                "lyric": "拉",
+                                "phonemes": {
+                                    "original": [
+                                        {
+                                            "type": "ahead",
+                                            "token": "zh",
+                                            "duration": 5,
+                                            "extra": {},
+                                            "workspace": {}
+                                        },
+                                        {
+                                            "type": "normal",
+                                            "token": "u",
+                                            "duration": 5,
+                                            "extra": {},
+                                            "workspace": {}
+                                        },
+                                        {
+                                            "type": "final",
+                                            "token": "ang",
+                                            "duration": 5,
+                                            "extra": {},
+                                            "workspace": {}
+                                        }
+                                    ],
+                                    "edited": []
+                                },
+                                "vibrato": {
+                                    "start": 0.1,
+                                    "end": 0.8,
+                                    "freq": 5,
+                                    "phase": 0.5,
+                                    "amp": 1.1,
+                                    "offset": 0.1,
+                                    "points": [
+                                        {
+                                            "x": 0.2,
+                                            "y": 1
+                                        },
+                                        {
+                                            "x": 0.8,
+                                            "y": 1
+                                        }
+                                    ]
+                                },
+                                "extra": {
+                                    "render": {
+                                        "seed": 0,
+                                        "speedUp": 100
+                                    }
+                                },
+                                "workspace": {}
+                            }
+                        ],
+                        "params": {
+                            "pitch": {
+                                "original": [
+                                    {
+                                        "type": "free",
+                                        "start": 100,
+                                        "step": 5,
+                                        "values": [
+                                            114,
+                                            514
+                                        ]
+                                    }
+                                ],
+                                "edited": [
+                                    {
+                                        "type": "anchor",
+                                        "nodes": [
+                                            {
+                                                "x": 114,
+                                                "y": 514,
+                                                "interp": "linear"
+                                            },
+                                            {
+                                                "x": 1919,
+                                                "y": 810,
+                                                "interp": "hermite"
+                                            },
+                                            {
+                                                "x": 3330,
+                                                "y": 0,
+                                                "interp": "none"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "free",
+                                        "start": 3500,
+                                        "step": 5,
+                                        "values": [
+                                            0,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "energy": {
+                                "original": [],
+                                "edited": [],
+                                "envelope": []
+                            }
+                        },
+                        "extra": {
+                            "timbre": {
+                                "nodes": [
+                                    {
+                                        "x": 114,
+                                        "y": [
+                                            0.1,
+                                            0.2,
+                                            0.8
+                                        ],
+                                        "interp": "linear"
+                                    },
+                                    {
+                                        "x": 1919,
+                                        "y": [
+                                            0.1,
+                                            0.2,
+                                            0.8
+                                        ],
+                                        "interp": "hermite"
+                                    },
+                                    {
+                                        "x": 0,
+                                        "y": [
+                                            0.1,
+                                            0.2,
+                                            0.8
+                                        ],
+                                        "interp": "none"
+                                    }
+                                ]
+                            }
+                        },
+                        "workspace": {
+                            "plugin1": {
+                                "key1": "val1"
+                            }
+                        }
+                    }
+                ],
+                "extra": {},
+                "workspace": {
+                    "app": {
+                        "color": {
+                            "type": "custom",
+                            "value": "#3B7FFF"
+                        }
+                    }
+                }
             },
-            "name": "BGM_1",
-            "control": {
-              "gain": 1,
-              "mute": false
-            },
-            "path": "/path/to/bgm.wav",
-            "extra": {},
-            "workspace": {}
-          }
+            {
+                "name": "音乐轨",
+                "control": {
+                    "gain": 1,
+                    "pan": 0,
+                    "mute": false,
+                    "solo": false
+                },
+                "clips": [
+                    {
+                        "type": "audio",
+                        "time": {
+                            "start": 0,
+                            "length": 0,
+                            "clipStart": 1000,
+                            "clipLen": 20000
+                        },
+                        "name": "BGM_1",
+                        "control": {
+                            "gain": 1,
+                            "mute": false
+                        },
+                        "path": "/path/to/bgm.wav",
+                        "extra": {},
+                        "workspace": {}
+                    }
+                ],
+                "extra": {},
+                "workspace": {
+                    "app": {
+                        "color": {
+                            "type": "default",
+                            "id": 1
+                        }
+                    }
+                }
+            }
         ],
         "extra": {},
         "workspace": {
-          "app": {
-            "color": {
-              "type": "default",
-              "id": 1
+            "app": {
+                "resolution": 480,
+                "loop": {
+                    "enabled": true,
+                    "start": 0,
+                    "length": 4800
+                }
+            },
+            "plugin1": {
+                "key1": "val1"
             }
-          }
         }
-      }
-    ],
-    "extra": {},
-    "workspace": {
-      "app": {
-        "resolution": 480,
-        "loop": {
-          "enabled": true,
-          "start": 0,
-          "length": 4800
-        }
-      },
-      "plugin1": {
-        "key1": "val1"
-      }
-    }
-  },
-  "workspace": {}
+    },
+    "workspace": {}
 }
