@@ -1,10 +1,10 @@
 {
-    "metadata": {
-        "version": "1.0.0",
-        "name": "这是一个示例工程",
-        "author": "作者"
-    },
+    "version": "1.0.0",
     "content": {
+        "metadata": {
+            "author": "作者",
+            "project": "这是一个示例工程"
+        },
         "master": {
             "control": {
                 "gain": 0,
@@ -76,23 +76,17 @@
                                         {
                                             "type": "ahead",
                                             "token": "zh",
-                                            "duration": 5,
-                                            "extra": {},
-                                            "workspace": {}
+                                            "start": 0
                                         },
                                         {
                                             "type": "normal",
                                             "token": "u",
-                                            "duration": 5,
-                                            "extra": {},
-                                            "workspace": {}
+                                            "start": 5
                                         },
                                         {
                                             "type": "final",
                                             "token": "ang",
-                                            "duration": 5,
-                                            "extra": {},
-                                            "workspace": {}
+                                            "start": 10
                                         }
                                     ],
                                     "edited": []
@@ -120,8 +114,7 @@
                                         "seed": 0,
                                         "speedUp": 100
                                     }
-                                },
-                                "workspace": {}
+                                }
                             }
                         ],
                         "params": {
@@ -174,55 +167,11 @@
                                 "edited": [],
                                 "envelope": []
                             }
-                        },
-                        "extra": {
-                            "timbre": {
-                                "nodes": [
-                                    {
-                                        "x": 114,
-                                        "y": [
-                                            0.1,
-                                            0.2,
-                                            0.8
-                                        ],
-                                        "interp": "linear"
-                                    },
-                                    {
-                                        "x": 1919,
-                                        "y": [
-                                            0.1,
-                                            0.2,
-                                            0.8
-                                        ],
-                                        "interp": "hermite"
-                                    },
-                                    {
-                                        "x": 0,
-                                        "y": [
-                                            0.1,
-                                            0.2,
-                                            0.8
-                                        ],
-                                        "interp": "none"
-                                    }
-                                ]
-                            }
-                        },
-                        "workspace": {
-                            "plugin1": {
-                                "key1": "val1"
-                            }
                         }
                     }
                 ],
-                "extra": {},
-                "workspace": {
-                    "app": {
-                        "color": {
-                            "type": "custom",
-                            "value": "#3B7FFF"
-                        }
-                    }
+                "color": {
+                    "value": "#3B7FFF"
                 }
             },
             {
@@ -247,36 +196,17 @@
                             "gain": 1,
                             "mute": false
                         },
-                        "path": "/path/to/bgm.wav",
-                        "extra": {},
-                        "workspace": {}
+                        "path": "/path/to/bgm.wav"
                     }
                 ],
-                "extra": {},
-                "workspace": {
-                    "app": {
-                        "color": {
-                            "type": "default",
-                            "id": 1
-                        }
-                    }
+                "color": {
+                    "id": 1
                 }
             }
-        ],
-        "extra": {},
-        "workspace": {
-            "app": {
-                "resolution": 480,
-                "loop": {
-                    "enabled": true,
-                    "start": 0,
-                    "length": 4800
-                }
-            },
-            "plugin1": {
-                "key1": "val1"
-            }
-        }
+        ]
     },
-    "workspace": {}
+    "workspace": {
+        "core": {},
+        "plugin1": {}
+    }
 }

@@ -6,11 +6,7 @@
 
 ```json
 {
-    "metadata": {
-        "version": "1.0.0",
-        "name": "New Project",
-        "author": "Admin"
-    },
+    "version": "1.0.0",
     "content": {
         ...
     },
@@ -19,14 +15,18 @@
     }
 }
 ```
-+ `metadata`：文件的元信息，包括版本号、工程名、作者等
++ `version`：文件版本号
 + `content`：工程可编辑区域，见下
-+ `workspace`：状态信息，不定长
++ `workspace`：应用程序状态信息
 
 ## 可编辑区域
 
 ```json
 {
+    "metadata": {
+        "name": "New Project",
+        "author": "Admin"
+    },
     "master": {
         "control": {
             "gain": 0,
@@ -46,15 +46,12 @@
     },
     "tracks": [
         ...
-    ],
-    "extra": {
-        ...
-    },
-    "workspace": {
-        ...
-    }
+    ]
 }
 ```
++ `metadata`: 元信息
+    + `name`: 工程名
+    + `author`: 作者
 + `master`：总线控制
     + `control`: 全局主控
         + `gain`：增益，`double`
@@ -68,8 +65,6 @@
     + `tempos`：曲速列表
     + `labels`：标签；列表
 + `tracks`：音轨列表
-+ `extra`：其他参数，不定长
-+ `workspace`：状态信息，不定长
 
 ## 拍号
 
@@ -120,10 +115,7 @@
     "clips": [
         ...
     ],
-    "extra": {
-        ...
-    },
-    "workspace": {
+    "color": {
         ...
     }
 }
@@ -136,8 +128,15 @@
     + `mute`：静音
     + `solo`：独奏
 + `clips`：音轨区间列表，暂有波形区间、人声区间
-+ `extra`：其他参数，不定长
-+ `workspace`：状态信息，不定长
++ `color`: 音轨颜色信息
+    + 自定义：
+        ```json
+        "value": "#3B7FFF"
+        ```
+    + 内置：
+        ```json
+        "id": "1"
+        ```
 
 ## 波形区间
 
@@ -156,12 +155,6 @@
         "mute": false
     },
     "path": "/path/to/bgm.wav",
-    "extra": {
-        ...
-    },
-    "workspace": {
-        ...
-    }
 }
 ```
 
@@ -174,8 +167,6 @@
 + `name`：音轨名
 + `control`：与主控一致
 + `path`：波形文件所在路径
-+ `extra`：其他参数，不定长
-+ `workspace`：状态信息，不定长
 
 ## 人声区间
 
@@ -220,12 +211,6 @@
     },
     "sources": {
         ...
-    },
-    "extra": {
-        ...
-    },
-    "workspace": {
-        ...
     }
 }
 ```
@@ -240,8 +225,6 @@
         + `edited`：已修改的参数列表
         + `envelope`: 在实参上的包络（音高参数没有这个属性）
 + `sources`：使用到的模型，不定长
-+ `extra`：其他参数，不定长
-+ `workspace`：状态信息，不定长
 
 ## 音符
 
@@ -276,12 +259,6 @@
                 "y": 1
             }
         ]
-    },
-    "extra": {
-        ...
-    },
-    "workspace": {
-        ...
     }
 }
 ```
@@ -303,8 +280,6 @@
     + `points`：控制点列表，一般只有两个点
         + `x`：颤音长度比例（0~1），`double`
         + `y`：颤音振幅比例（0~1），`double`
-+ `extra`：其他参数，不定长
-+ `workspace`：状态信息，不定长
 
 ## 音素
 
@@ -312,21 +287,13 @@
 {
     "type": "ahead",
     "token": "ang",
-    "duration": 5,
-    "extra": {
-        ...
-    },
-    "workspace": {
-        ...
-    }
+    "start": 5
 }
 ```
 
 + `type`：类型，`ahead`、`normal`或`final`
 + `token`：音素符号
-+ `duration`：时长（ms），`int`
-+ `extra`：其他参数，不定长
-+ `workspace`：状态信息，不定长
++ `start`：相对当前音符头的开始时间（ms），`int`
 
 ## 单线条参数
 
@@ -353,6 +320,7 @@
 ```json
  {
     "type": "anchor",
+    "start": 100,
     "nodes": [
         {
             "x": 114,
@@ -374,6 +342,7 @@
 ```
 
 + `type`：类型，固定值
++ `start`：开始（tick）,`int`
 + `nodes`：参数列表
     + `x`：时间坐标（Tick），`int`
     + `y`：音高坐标（1/100个半音），`int`
