@@ -3,7 +3,7 @@
     "content": {
         "metadata": {
             "author": "作者",
-            "project": "这是一个示例工程"
+            "name": "这是一个示例工程"
         },
         "master": {
             "control": {
@@ -15,8 +15,8 @@
             "timeSignatures": [
                 {
                     "pos": 0,
-                    "numerator": 4,
-                    "denominator": 4
+                    "num": 4,
+                    "den": 4
                 }
             ],
             "tempos": [
@@ -133,6 +133,7 @@
                                 "edited": [
                                     {
                                         "type": "anchor",
+                                        "start": 0,
                                         "nodes": [
                                             {
                                                 "x": 114,

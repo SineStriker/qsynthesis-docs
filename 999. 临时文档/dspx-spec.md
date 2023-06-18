@@ -71,13 +71,13 @@
 ```json
 {
     "pos": 0,
-    "numerator": 4,
-    "denominator": 4
+    "num": 4,
+    "den": 4
 }
 ```
 + `pos`：位置（tick），`int`
-+ `numerator`：分子，`int`
-+ `denominator`：分母，`int`
++ `num`：分子，`int`
++ `den`：分母，`int`
 
 ## 曲速
 
