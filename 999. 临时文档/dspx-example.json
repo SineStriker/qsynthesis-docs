@@ -14,9 +14,9 @@
         "timeline": {
             "timeSignatures": [
                 {
-                    "pos": 0,
-                    "num": 4,
-                    "den": 4
+                    "index": 0,
+                    "numerator": 4,
+                    "denominator": 4
                 }
             ],
             "tempos": [

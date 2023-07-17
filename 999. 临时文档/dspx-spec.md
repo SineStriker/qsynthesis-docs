@@ -70,14 +70,14 @@
 
 ```json
 {
-    "pos": 0,
-    "num": 4,
-    "den": 4
+    "index": 0,
+    "numerator": 4,
+    "denominator": 4
 }
 ```
-+ `pos`：位置（tick），`int`
-+ `num`：分子，`int`
-+ `den`：分母，`int`
++ `index`：位置（bar），`int`
++ `numerator`：分子，`int`
++ `denominator`：分母，`int`
 
 ## 曲速
 
