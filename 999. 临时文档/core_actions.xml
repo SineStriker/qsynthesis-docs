@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionSystem>
+    <actions>
+        <!-- File -->
+        <item id="NewFile" command="Create: New File" shortcut="Ctrl+N"
+            icon="svg(:/svg/icons/document_add_16_filled.svg)" />
+        <item id="OpenFile" command="File: Open File" shortcut="Ctrl+O"
+            icon="svg(:/svg/icons/folder_open_16_filled.svg)" />
+        <item id="SaveFile" command="File: Save File" shortcut="Ctrl+S"
+            icon="svg(:/svg/icons/save_16_filled.svg)" />
+        <item id="SaveAsFile" command="File: Save As File" shortcut="Ctrl+Shift+S"
+            icon="svg(:/svg/icons/save_edit_20_filled.svg)" />
+        <item id="CloseFile" command="File: Close File" />
+
+        <!-- Preferences -->
+        <item id="Settings" command="Preferences: Settings" shortcut="Ctrl+,"
+            icon="svg(:/svg/icons/settings_16_filled.svg)" />
+        <item id="ColorThemes" command="Preferences: Color Themes"
+            icon="svg(:/svg/icons/color_16_filled.svg)"
+            shortcut="Ctrl+K,Ctrl+T" />
+        <item id="Languages" command="Preferences: Locales And Languages"
+            icon="svg(:/svg/icons/globe_16_regular.svg)"
+            shortcut="Ctrl+K,Ctrl+L" />
+
+        <!-- Edit -->
+        <item id="Undo" command="Edit: Undo" shortcut="Ctrl+Z"
+            icon="svg(:/svg/icons/arrow_undo_16_filled.svg)" />
+        <item id="Redo" command="Edit: Redo" shortcut="Ctrl+Shift+Z"
+            icon="svg(:/svg/icons/arrow_redo_16_filled.svg)" />
+        <item id="Cut" command="Edit: Cut" shortcut="Ctrl+X"
+            icon="svg(:/svg/icons/cut_20_filled.svg)" />
+        <item id="Copy" command="Edit: Copy" shortcut="Ctrl+C"
+            icon="svg(:/svg/icons/copy_16_filled.svg)" />
+        <item id="Paste" command="Edit: Paste" shortcut="Ctrl+V"
+            icon="svg(:/svg/icons/clipboard_paste_16_filled.svg)" />
+        <item id="Delete" command="Edit: Delete" shortcut="Del" />
+        <item id="SelectAll" command="Edit: Select All" shortcut="Ctrl+A" />
+        <item id="Deselect" command="Edit: Deselect" />
+        <item id="Find" />
+        <item id="Replace" />
+
+        <item id="CursorMode" command="Edit Mode: Cursor" shortcut="V"
+            icon="svg(:/svg/icons/cursor_24_filled.svg)" />
+        <item id="NotePenMode" command="Edit Mode: Note Pen" shortcut="B"
+            icon="svg(:/svg/icons/edit_24_filled.svg)" />
+        <item id="PitchAnchorMode" command="Edit Mode: Pitch Anchor Point" shortcut="1"
+            icon="svg(:/svg/icons/pitch_anchor_24_filled.svg)" />
+        <item id="PitchFreeMode" command="Edit Mode: Pitch Drawing" shortcut="2"
+            icon="svg(:/svg/icons/pitch_edit_24_filled.svg)" />
+        <item id="PitchEraserMode" command="Edit Mode: Pitch Eraser" shortcut="3" />
+        <item id="PitchBrushMode" command="Edit Mode: Pitch Brush" shortcut="4"
+            icon="svg(:/svg/icons/paint_brush_arrow_down_24_filled.svg)" />
+        <item id="VibratoMode" command="Edit Mode: Vibrato" shortcut="5"
+            icon="svg(:/svg/icons/pitch_vibrato_24_filled.svg)" />
+
+        <!-- View -->
+        <item id="Appearance" icon="svg(:svg/icons/window_apps_16_filled.svg)" />
+
+        <!-- Play -->
+        <item id="Play" command="Playback: Play" shortcut="SPACE"
+            icon="svg((:/svg/icons/play_16_filled.svg, up2=:/svg/icons/pause_16_filled.svg), auto)" />
+        <item id="Stop" command="Playback: Stop" shortcut="F7"
+            icon="svg(:/svg/icons/stop_16_filled.svg)" />
+        <item id="MoveToStart" command="Playback: Move To Start"
+            icon="svg(:/svg/icons/previous_16_filled.svg)" />
+        <item id="MoveToEnd" command="Playback: Move To End"
+            icon="svg(:/svg/icons/next_16_filled.svg)" />
+        <item id="Metronome" command="Playback: Metronome"
+            icon="svg(:/svg/icons/metronome-line.svg)" />
+        <item id="LoopPlay" command="Playback: Loop Play"
+            icon="svg(:/svg/icons/arrow_repeat_all_16_filled.svg)" />
+
+        <!-- Help -->
+        <item id="ShowHome" command="Help: Show Home" icon="svg(:/svg/icons/home_16_filled.svg)" />
+        <item id="FindAction" command="Help: Show All Actions" shortcut="Ctrl+Shift+P"
+            icon="svg(:/svg/icons/search_16_filled.svg)" />
+        <item id="AboutPlugins" command="About: About Plugins"
+            icon="svg(:/svg/icons/puzzle_piece_16_filled.svg)" />
+        <item id="AboutApp" command="About: About ${APPNAME}"
+            icon="svg(:/svg/icons/info_16_filled.svg)" />
+        <item id="AboutQt" command="About: About Qt" />
+
+        <!-- Appearances -->
+        <item id="MainMenuVisible" command="View: Main Menu" />
+        <item id="MainToolbarVisible" command="View: Main Toolbar" />
+        <item id="DockVisible" command="View: Dock Panel Bars" />
+        <item id="StatusBarVisible" command="View: Status Bar" />
+
+        <!-- Docks -->
+        <item id="TrackPanelVisible" command="View: Tracks" />
+
+        <!-- FloatingPanels -->
+        <item id="PhonemePanelVisible" command="View: Phonemes" />
+
+        <!-- Invisible -->
+        <item id="ShowRecentFiles" command="File: Show Recent Files" />
+        <item id="SelectPianoKeyWidget" command="View: Select Piano Key Widget" />
+    </actions>
+
+    <domains>
+        <domain id="home">
+            <menuBar id="MainMenu">
+                <menu id="File">
+                    <group id="OpenGroup">
+                        <action id="NewFile" />
+                        <action id="OpenFile" />
+                        <action id="OpenRecent" />
+                    </group>
+                    <group id="PreferenceGroup">
+                        <menu id="PreferenceMenu">
+                            <action id="Settings" />
+                            <action id="ColorThemes" />
+                            <action id="Languages" />
+                        </menu>
+                    </group>
+                    <group id="ExitGroup">
+                        <action id="CloseFile" />
+                    </group>
+                </menu>
+
+                <menu id="Help">
+                    <group id="WelcomeGroup">
+                        <action id="ShowHome" />
+                        <action id="FindAction" />
+                    </group>
+                    <group id="AboutGroup">
+                        <action id="AboutPlugins" />
+                        <action id="AboutApp" />
+                        <action id="AboutQt" />
+                    </group>
+                </menu>
+            </menuBar>
+        </domain>
+
+        <domain id="project">
+            <menuBar id="MainMenu">
+                <menu id="File">
+                    <group id="OpenGroup">
+                        <action id="NewFile" />
+                        <action id="OpenFile" />
+                        <action id="OpenRecent" />
+                    </group>
+                    <group id="SaveGroup">
+                        <action id="SaveFile" />
+                        <action id="SaveAsFile" />
+                    </group>
+                    <group id="PreferenceGroup">
+                        <menu id="PreferenceMenu">
+                            <action id="Settings" />
+                            <action id="ColorThemes" />
+                            <action id="Languages" />
+                        </menu>
+                    </group>
+                    <group id="ExitGroup">
+                        <action id="CloseFile" />
+                    </group>
+                </menu>
+
+                <menu id="Edit">
+                    <group id="UndoGroup">
+                        <action id="Undo" />
+                        <action id="Redo" />
+                    </group>
+                    <group id="PlainEditGroup">
+                        <action id="Cut" />
+                        <action id="Copy" />
+                        <action id="Paste" />
+                        <action id="Delete" />
+                    </group>
+                    <group id="SelectGroup">
+                        <action id="SelectAll" />
+                        <action id="Deselect" />
+                    </group>
+                    <group id="FindReplaceGroup">
+                        <action id="Find" />
+                        <action id="Replace" />
+                    </group>
+                    <group id="EditModeGroup">
+                        <menu id="PianoRollEditModeMenu">
+                            <action id="CursorMode" />
+                            <action id="NotePenMode" />
+                            <action id="PitchAnchorMode" />
+                            <action id="PitchFreeMode" />
+                            <action id="PitchEraserMode" />
+                            <action id="PitchBrushMode" />
+                            <action id="VibratoMode" />
+                        </menu>
+                    </group>
+                </menu>
+
+                <menu id="View">
+                    <menu id="Appearance">
+                        <action id="MainMenuVisible" />
+                        <action id="MainToolbarVisible" />
+                        <action id="DockVisible" />
+                        <action id="StatusBarVisible" />
+                    </menu>
+                    <menu id="DockPanelsVisibility">
+                        <action id="TrackPanelVisible" />
+                    </menu>
+                    <menu id="FloatingPanelsVisibility">
+                        <action id="PhonemePanelVisible" />
+                    </menu>
+                </menu>
+
+                <menu id="Playback">
+                    <group id="PlayControlGroup">
+                        <action id="Play" />
+                        <action id="Stop" />
+                        <action id="MoveToStart" />
+                        <action id="MoveToEnd" />
+                    </group>
+                    <group id="PlayModeGroup">
+                        <menu id="PlayOptionModeMenu">
+                            <action id="Metronome" />
+                            <action id="LoopPlay" />
+                        </menu>
+                        <menu id="PageTurningModeMenu">
+                            <action id="NoPageTurning" />
+                            <action id="PlainPageTurning" />
+                            <action id="SmoothPageTurning" />
+                        </menu>
+                    </group>
+                </menu>
+
+                <menu id="Help">
+                    <group id="WelcomeGroup">
+                        <action id="ShowHome" />
+                        <action id="FindAction" />
+                    </group>
+                    <group id="AboutGroup">
+                        <action id="AboutPlugins" />
+                        <action id="AboutApp" />
+                        <action id="AboutQt" />
+                    </group>
+                </menu>
+            </menuBar>
+
+            <toolBar id="MainToolBar">
+                <action id="TimerLabel" />
+                <separator />
+                <action id="QuantizeSelector" />
+                <group id="PlayControlGroup" />
+                <menu id="PlayOptionModeMenu" expand="true" />
+                <stretch />
+                <action id="FindAction" />
+                <action id="Settings" />
+            </toolBar>
+
+            <toolBar id="PianoRollToolbar">
+                <action id="TrackLabel" />
+                <menu id="PianoRollEditModeMenu" expand="true" />
+            </toolBar>
+        </domain>
+    </domains>
+</actionSystem>

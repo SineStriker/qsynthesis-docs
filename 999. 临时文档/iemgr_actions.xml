@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionSystem>
+    <actions>
+        <!-- Import -->
+        <item id="ImportProject" command="Import: Import Project"
+            icon="svg(:/svg/icons/document_arrow_right_16_filled.svg)" />
+        <item id="ImportAudio" command="Import: Import Audio" />
+
+        <!-- Export -->
+        <item id="ExportProject" command="Export: Export Project"
+            icon="svg(:/svg/icons/document_arrow_left_16_filled.svg)" />
+        <item id="ExportAudio" command="Export: Export Audio"
+            icon="svg(:/svg/icons/arrow_export_up_16_filled.svg)" />
+    </actions>
+    
+    <domains>
+        <domain id="home">
+            <insertion id="core.OpenGroup" mode="insertBehind">
+                <group id="ImportExportGroup">
+                    <menu id="Import">
+                        <action id="ImportProject" />
+                        <action id="ImportAudio" />
+                    </menu>
+                </group>
+            </insertion>
+        </domain>
+
+        <domain id="project">
+            <insertion>
+                <rules>
+                    <rule id="core.SaveGroup" mode="insertBehind" />
+                </rules>
+                <group id="ImportExportGroup">
+                    <menu id="Import">
+                        <action id="ImportProject" />
+                        <action id="ImportAudio" />
+                    </menu>
+                    <menu id="Export">
+                        <action id="ExportProject" />
+                        <action id="ExportAudio" />
+                    </menu>
+                </group>
+            </insertion>
+        </domain>
+    </domains>
+</actionSystem>
